@@ -1,0 +1,121 @@
+body {
+    background-color: #EEEEEE;
+    --angle: 90deg;
+}
+    
+  
+.ray {
+  clip-path:polygon(0% 45%, 100% 0%, 100% 100%, 0% 55%);
+  transition: 4s;
+  transform: translateY(-50%) translateX(-50%) rotate(var(--angle)) translateY(50%) translateX(50%) translateY(-50%); 
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 500px;
+  height: 100px;
+  background: linear-gradient(0.25turn,rgba(255,255,0,0.7), rgba(255,255,100,0));
+}
+  
+  
+.light1 {
+  animation-duration: 10s;
+  animation-name: wave;
+  animation-iteration-count: infinite;
+}
+  
+.light2 {
+  animation-duration: 7s;
+  animation-name: wave;
+  animation-iteration-count: infinite;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  font-size: larger;
+  font-weight: 600;
+  background-color: #1D0E01;
+  color: #EEEEEE;
+  border-radius: 10px;
+  width: 120px;
+  height: 80px;
+}
+
+button:hover{
+  cursor: pointer;
+  transform: translateY(-3px);
+}
+
+button:active{
+  transform: translateY(-6px);
+}
+  
+  
+@keyframes wave {
+  0% {
+      --angle: 90deg;
+  }
+    
+  50%{
+      --angle: 110deg;
+  }
+  100%{
+      --angle: 60deg;
+  }
+}
+
+.pressedA {
+    animation: button-press 0.1s ease;
+    background-color: violet;
+}
+
+.pressedS {
+  animation: button-press 0.1s ease;
+  background-color: red;
+}
+
+.pressedD {
+  animation: button-press 0.1s ease;
+  background-color: orange;
+}
+
+.pressedF {
+  animation: button-press 0.1s ease;
+  background-color: palegreen;
+}
+
+.pressedG {
+  animation: button-press 0.1s ease;
+  background-color: chocolate;
+}
+
+.pressedH {
+  animation: button-press 0.1s ease;
+  background-color: burlywood;
+}
+
+.pressedJ {
+  animation: button-press 0.1s ease;
+  background-color: navy;
+}
+
+.pressedK {
+  animation: button-press 0.1s ease;
+  background-color: lavender;
+}
+
+.pressedL {
+  animation: button-press 0.1s ease;
+  background-color: yellow;
+}
+
+@keyframes button-press {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(0.9);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
